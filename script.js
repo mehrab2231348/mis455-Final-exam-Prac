@@ -11,3 +11,16 @@ searchInput.addEventListener('keydown', (event) => {
         searchButton.click();
     }
 });
+
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim();
+    if (query) {
+        fetchMeals(query);
+    }
+});
+
+showAllButton.addEventListener('click', () => {
+    displayMeals(currentMeals, false);
+    showAllButton.classList.add('hidden');
+});
+
